@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth CSS Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #f0f2f5;
+    }
+
+    .title {
+      margin-bottom: 30px;
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    .animation-box {
+      width: 100%;
+      height: 200px;
+      position: relative;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .moving-square {
+      width: 80px;
+      height: 80px;
+      background: #3498db;
+      border-radius: 6px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      animation: slideColor 4s infinite;
+    }
+
+    @keyframes slideColor {
+      0% {
+        left: 10px;
+        background: #3498db;
+      }
+      50% {
+        left: calc(100% - 90px);
+        background: #e74c3c;
+      }
+      100% {
+        left: 10px;
+        background: #3498db;
+      }
+    }
+
+    .description {
+      max-width: 600px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .description h2 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    .description ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .description li {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">
+    <h1>Smooth CSS Animation</h1>
+    <p>A simple moving box with dynamic color transition</p>
+  </div>
+
+  <div class="animation-box">
+    <div class="moving-square"></div>
+  </div>
+
+  <div class="description">
+    <h2>How It Works</h2>
+    <p>This animation demonstrates:</p>
+    <ul>
+      <li>A square sliding smoothly from left to right and back</li>
+      <li>Background color shifting from blue to red during movement</li>
+      <li>Continuous looping with keyframes</li>
+      <li>A clean and responsive design</li>
+    </ul>
+  </div>
+</body>
+</html>

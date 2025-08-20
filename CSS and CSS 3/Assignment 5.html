@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aniverse Parlour</title>
+  <style>
+
+    html,body{
+      margin: 0;
+      padding: 0;
+      margin: 0;
+      padding: 0;
+
+    }
+
+    .bar {
+      margin-top: -20px;
+      height: 120px;
+      width: 100%;
+      background-color: black;
+      
+    }
+
+    .a1 {
+      margin-top: 20px;
+      font-size: 55px;
+      width: 200px;
+      margin-left: 30px;
+      color: white;
+    }
+    
+    .b2 {
+      margin-top: -75px;
+      font-size: 40px;
+      margin-left: 65px;
+      width: 120px;
+      color: white; 
+     }
+     
+
+    .div1 {
+      display: flex;
+      list-style: none;
+      margin-left: 300px;
+      margin-top: -100px;
+      gap: 100px
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      
+    }
+
+    li {
+      font-size: 18px;
+      text-decoration: none;
+      color: black;
+      font-family: 'arial black', 'gadget', 'sans-serif';
+    }
+
+    li:hover{
+       transform: scale(1.2);
+    }
+
+    .button {
+      display: flex;
+      justify-content: end;
+      margin-right: 25px;
+      margin-top: -53px;
+    }
+    
+    .glow-on-hover {
+      width: 130px;
+      height: 50px;
+      border: none;
+      outline: none;
+      color: skyblue;
+      background: #111;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 30px;
+      font-size: 22px;
+      font-family: 'arial black', 'gadget', 'sans-serif';
+    }
+
+    .glow-on-hover:before {
+      content: '';
+      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00,
+          #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing 20s linear infinite;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      border-radius: 30px;
+    }
+
+    .glow-on-hover:hover:before {
+      opacity: 1;
+    }
+
+    .glow-on-hover:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #111;
+      left: 0;
+      top: 0;
+      border-radius: 30px;
+    }
+
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 400% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+
+
+
+
+    
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="bar">
+      
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <p class="a1" style="font-family:'Playfair Display', serif;;">Aniverse</p>
+    <p class="b2" style=" font-family: 'Playfair Display', serif;">Parlour</p>
+
+    <nav>
+
+      <ul>
+
+        <div class="div1">
+          <li><a href=""><b>Home</b></a></li>
+          <li><a href=""><b>Services</b></a></li>
+          <li><a href=""><b>Appointment</b></a></li>
+          <li><a href=""><b>Feedback</b></a></li>
+        </div>
+
+      </ul>
+
+      <div class="button">
+        <button type="button" class="glow-on-hover" onclick="window.open('parlour1.html', '_blank')">Sign In</button>
+      </div>
+
+    </nav>
+
+  </div>
+
+</body>
+
+</html>

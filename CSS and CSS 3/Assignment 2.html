@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My CSS Practice Site</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Container for layout */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Header / Hero Section */
+    header {
+      background: linear-gradient(135deg, #3498db, #9b59b6);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Section Styles */
+    section {
+      background: #fff;
+      margin: 40px 0;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    section p {
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: #eee;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Hero -->
+  <header>
+    <h1>Welcome to My CSS Practice Site</h1>
+    <p>Learning web design step by step with simple examples</p>
+  </header>
+
+  <div class="container">
+    <!-- About Section -->
+    <section>
+      <h2>About This Page</h2>
+      <p>
+        This is a small practice homepage made with basic HTML and CSS. 
+        It demonstrates simple text styling, colors, and layouts without using any frameworks. 
+        The goal is to make the content clean, readable, and responsive across devices.
+      </p>
+    </section>
+
+    <!-- Services / Content Section -->
+    <section>
+      <h2>What You’ll Find Here</h2>
+      <p>
+        The sections below show different background styles and text formatting examples. 
+        These are like building blocks of a real website. With practice, 
+        you can turn them into navigation menus, service cards, or blog posts.
+      </p>
+      <p>
+        Hover over any section and notice the slight lift effect. 
+        Small touches like these make a site feel more interactive.
+      </p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 My Practice Website | Designed with HTML & CSS</p>
+    </footer>
+  </div>
+</body>
+</html>

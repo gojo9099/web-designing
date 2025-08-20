@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Styling Demo</title>
+
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        /* Main heading */
+        h1 {
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #012a5e; /* dark navy */
+        }
+
+        /* Regular paragraphs */
+        p {
+            color: red;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        /* Adjustments for small screens */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            p {
+                text-align: left; /* easier to read on narrow screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Text Styling Practice</h1>
+
+    <p>
+        This is a simple example to test text styling with CSS. The paragraph uses a navy 
+        color and justified alignment, which makes both sides of the text look neat. The 
+        heading above is centered and slightly larger to stand out from the body text.
+    </p>
+
+    <p>
+        On smaller screens, the layout adjusts for better readability. For example, the 
+        text becomes left-aligned and the font sizes shrink a bit. This helps keep the 
+        design readable across devices without adding complexity.
+    </p>
+</body>
+</html>

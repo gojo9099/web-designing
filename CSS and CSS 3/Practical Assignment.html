@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Styled Webpage</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f7f9fc;
+      color: #333;
+    }
+
+    header {
+      background: #1f3c88;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      border-bottom: 4px solid #ffb703;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    nav.horizontal {
+      background: #264653;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+    }
+
+    nav.horizontal a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 10px 15px;
+      transition: 0.3s;
+    }
+
+    nav.horizontal a:hover {
+      background: #ffb703;
+      color: #1f3c88;
+      border-radius: 6px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    nav.vertical {
+      background: #e9ecef;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #ddd;
+    }
+
+    nav.vertical h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #1f3c88;
+    }
+
+    nav.vertical ul {
+      list-style: none;
+    }
+
+    nav.vertical li {
+      margin-bottom: 10px;
+    }
+
+    nav.vertical a {
+      text-decoration: none;
+      color: #264653;
+      font-weight: bold;
+      display: block;
+      padding: 10px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    nav.vertical a:hover {
+      background: #ffb703;
+      color: white;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      margin-bottom: 15px;
+      color: #1f3c88;
+      font-size: 1.8rem;
+    }
+
+    section p {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    footer {
+      background: #1f3c88;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    .highlight {
+      background-color: #ffb703;
+      padding: 10px;
+      border-radius: 5px;
+      color: #1f3c88;
+      font-weight: bold;
+    }
+
+    .service-list {
+      list-style: none;
+      padding-left: 20px;
+    }
+
+    .service-list li {
+      margin-bottom: 5px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .service-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #ffb703;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      nav.horizontal {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Official Webpage</h1>
+</header>
+
+<nav class="horizontal">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+  <nav class="vertical">
+    <h2>Quick Links</h2>
+    <ul>
+      <li><a href="#">Overview</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Careers</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Welcome</h2>
+      <p>This is an example of a professional styled webpage using <strong>CSS background colors, margins, padding, borders, and navigation menus</strong>.</p>
+      <p>The horizontal navigation at the top provides easy access to main sections, while the vertical menu on the left acts as a sidebar for quick links.</p>
+    </section>
+
+    <section>
+      <h2>About Us</h2>
+      <p>We are a modern company delivering innovative solutions with clean, responsive, and user-friendly designs. Our layouts ensure a smooth browsing experience.</p>
+    </section>
+
+    <section>
+      <h2>Our Services</h2>
+      <ul class="service-list">
+        <li>Web Development</li>
+        <li>Mobile App Development</li>
+        <li>UI/UX Design</li>
+        <li>Digital Marketing</li>
+        <li>Cloud Solutions</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact Us</h2>
+      <p>If you have any questions, feel free to reach out to us!</p>
+      <p class="highlight">Email: info@officialcompany.com</p>
+      <p class="highlight">Phone: (555) 123-4567</p>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <p>&copy; 2025 Official Company | Designed for Assignment</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design with Media Queries</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header, footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        footer {
+            margin-top: 20px;
+        }
+        
+        .content-section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .main-content {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        @media (min-width: 768px) {
+            .main-content {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            
+            .content-section {
+                flex-basis: calc(50% - 10px);
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .container {
+                padding: 30px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .content-section {
+                flex-basis: calc(33.33% - 15px);
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            header, footer, .content-section {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Responsive Layout</h1>
+            <p>This design adapts to different screen sizes</p>
+        </header>
+        
+        <div class="main-content">
+            <section class="content-section">
+                <h2>Section One</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+            </section>
+            
+            <section class="content-section">
+                <h2>Section Two</h2>
+                <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum.</p>
+            </section>
+            
+            <section class="content-section">
+                <h2>Section Three</h2>
+                <p>Vestibulum commodo felis quis tortor. Ut aliquam sollicitudin leo. Cras tincidunt sem non nisl. Fusce sed dolor sit amet.</p>
+            </section>
+        </div>
+        
+        <footer>
+            <p>&copy; 2023 Responsive Design. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

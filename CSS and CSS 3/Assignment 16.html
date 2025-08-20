@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 16: Advanced CSS with Transforms and Transitions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1) rotate(3deg);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Image Gallery with Transforms & Transitions</h1>
+
+  <div class="gallery">
+    <img src="https://picsum.photos/300/200?random=1" alt="Gallery Image 1">
+    <img src="https://picsum.photos/300/200?random=2" alt="Gallery Image 2">
+    <img src="https://picsum.photos/300/200?random=3" alt="Gallery Image 3">
+    <img src="https://picsum.photos/300/200?random=4" alt="Gallery Image 4">
+    <img src="https://picsum.photos/300/200?random=5" alt="Gallery Image 5">
+    <img src="https://picsum.photos/300/200?random=6" alt="Gallery Image 6">
+  </div>
+
+</body>
+</html>

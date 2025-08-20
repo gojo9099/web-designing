@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borders & Shadows Example</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+
+    header p {
+      color: #555;
+    }
+
+    /* Card Section */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card {
+      background: #fff;
+      width: 300px;
+      border: 2px solid #3498db; /* border */
+      border-radius: 10px;        /* rounded corners */
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* shadow */
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      border-color: #2980b9;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      color: #2c3e50;
+      font-size: 1.3rem;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .date {
+      display: block;
+      margin-top: 10px;
+      color: #3498db;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    @media(max-width: 768px) {
+      .card {
+        width: 90%;
+        max-width: 350px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Assignment 3: Borders and Shadows</h1>
+    <p>Objective: Practice borders, rounded corners and shadows in CSS</p>
+  </header>
+
+  <div class="cards">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://placehold.co/600x400" alt="workspace">
+      <div class="card-content">
+        <h3>Workspace Setup</h3>
+        <p>Tips for making your study or work desk clean, comfortable and productive.</p>
+        <span class="date">Posted: June 15, 2023</span>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="https://placehold.co/600x400" alt="mountains">
+      <div class="card-content">
+        <h3>Nature Escapes</h3>
+        <p>Simple ways to enjoy the outdoors: hiking spots, camping ideas, and relaxation.</p>
+        <span class="date">Posted: June 10, 2023</span>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="https://placehold.co/600x400" alt="keyboard">
+      <div class="card-content">
+        <h3>Tech Tips</h3>
+        <p>Easy keyboard shortcuts and tricks that save time while working on your computer.</p>
+        <span class="date">Posted: June 5, 2023</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
