@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>User Feedback</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="card">
+      <h1>User Feedback</h1>
+      <div id="noFB" class="no-data">Loading...</div>
+      <div id="fbTable" class="table-wrap"></div>
+
+      <div class="actions">
+        <a class="link" href="index.html">Back to Form</a>
+        <button id="fbClear" class="btn alt">Clear All</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function(){
+      function getFB(){
+        var raw = localStorage.getItem('userFeedback');
+        try{ var list = raw ? JSON.parse(raw) : []; return Array.isArray(list) ? list : [] }catch(e){ return [] }
+      }
+
+      function render(list){
+        var box = document.getElementById('fbTable');
+        var empty = document.getElementById('noFB');
+        box.innerHTML = '';
+        if(!list.length){ empty.textContent = 'No feedback available'; return }
+        empty.textContent = '';
+        var table = document.createElement('table');
+        table.innerHTML = '<thead><tr><th>Name</th><th>Feedback</th><th>When</th></tr></thead>';
+        var body = document.createElement('tbody');
+        list.forEach(function(x){
+          var tr = document.createElement('tr');
+          tr.innerHTML = '<td>' + (x.name||'') + '</td>' +
+                         '<td>' + (x.text||'') + '</td>' +
+                         '<td>' + (x.time||'') + '</td>';
+          body.appendChild(tr);
+        });
+        table.appendChild(body);
+        box.appendChild(table);
+      }
+
+      var data = getFB();
+      render(data);
+
+      document.getElementById('fbClear').addEventListener('click', function(){
+        if(confirm('Clear all feedback?')){
+          localStorage.removeItem('userFeedback');
+          render([]);
+          document.getElementById('noFB').textContent = 'No feedback available';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

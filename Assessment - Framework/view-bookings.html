@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saved Bookings</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="card">
+      <h1>Saved Bookings</h1>
+      <div id="no-data" class="no-data">Loading...</div>
+      <div id="table-wrap" class="table-wrap"></div>
+
+      <div class="actions">
+        <a class="link" href="index.html">Back to Form</a>
+        <button id="clearAll" class="btn alt">Clear All</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function(){
+      function getBookings(){
+        var raw = localStorage.getItem('healthBookings');
+        try{ var arr = raw ? JSON.parse(raw) : []; return Array.isArray(arr) ? arr : [] }catch(e){ return [] }
+      }
+
+      function render(list){
+        var wrap = document.getElementById('table-wrap');
+        var noData = document.getElementById('no-data');
+        wrap.innerHTML = '';
+        if(!list.length){ noData.textContent = 'No bookings available'; return }
+        noData.textContent = '';
+        var table = document.createElement('table');
+        table.innerHTML = '<thead><tr><th>Name</th><th>Phone</th><th>Email</th><th>Age</th><th>Date</th><th>Concern</th></tr></thead>';
+        var body = document.createElement('tbody');
+        list.forEach(function(it){
+          var tr = document.createElement('tr');
+          tr.innerHTML = '<td>' + (it.name||'') + '</td>' +
+                         '<td>' + (it.phone||'') + '</td>' +
+                         '<td>' + (it.email||'') + '</td>' +
+                         '<td>' + (it.age||'') + '</td>' +
+                         '<td>' + (it.date||'') + '</td>' +
+                         '<td>' + (it.concern||'') + '</td>';
+          body.appendChild(tr);
+        });
+        table.appendChild(body);
+        wrap.appendChild(table);
+      }
+
+      var bookings = getBookings();
+      render(bookings);
+
+      document.getElementById('clearAll').addEventListener('click', function(){
+        if(confirm('Are you sure you want to clear all bookings?')){
+          localStorage.removeItem('healthBookings');
+          render([]);
+          document.getElementById('no-data').textContent = 'No bookings available';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

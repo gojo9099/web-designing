@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>student registration form</title>
+  <link rel="stylesheet" href="html5.css">
+</head>
+<body>
+  <main class="page-wrapper">
+    <section class="form-card" aria-labelledby="form-title">
+      <header class="form-header">
+        <div class="title-block">
+          <h1 id="form-title">student registration form</h1>
+          <p class="subtitle">fill the form carefully. required fields have *</p>
+        </div>
+      </header>
+
+      <form id="registration-form" novalidate>
+        <div class="form-row">
+          <label for="first-name">first name <span class="req">*</span></label>
+          <input id="first-name" name="firstName" type="text" placeholder="enter first name" autocomplete="given-name" required>
+          <small class="hint">only letters, 3 to 6 characters</small>
+        </div>
+
+        <div class="form-row">
+          <label for="last-name">last name</label>
+          <input id="last-name" name="lastName" type="text" placeholder="enter last name" autocomplete="family-name">
+        </div>
+
+        <div class="row-two">
+          <div class="form-row half">
+            <label for="email">email <span class="req">*</span></label>
+            <input id="email" name="email" type="email" placeholder="example@mail.com" required>
+          </div>
+
+          <div class="form-row half">
+            <label for="mobile">mobile <span class="req">*</span></label>
+            <input id="mobile" name="mobile" type="tel" placeholder="10 digits only" inputmode="numeric" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>gender</label>
+          <div class="radio-group" role="radiogroup" aria-label="gender">
+            <label class="radio"><input type="radio" name="gender" value="male"> male</label>
+            <label class="radio"><input type="radio" name="gender" value="female"> female</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="dob">date of birth</label>
+          <input id="dob" name="dob" type="date">
+        </div>
+
+        <div class="form-row">
+          <label for="address">address</label>
+          <textarea id="address" name="address" placeholder="enter full address" rows="4"></textarea>
+        </div>
+
+        <div class="form-row small-cols">
+          <div>
+            <label for="city">city</label>
+            <input id="city" name="city" placeholder="city">
+          </div>
+          <div>
+            <label for="pin">area pin</label>
+            <input id="pin" name="pin" placeholder="pin code" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="state">state</label>
+          <input id="state" name="state" placeholder="state">
+        </div>
+
+        <div class="form-row">
+          <label for="qualification">qualification</label>
+          <select id="qualification" name="qualification">
+            <option value="">select qualification</option>
+            <option value="diploma">diploma</option>
+            <option value="undergraduate">undergraduate</option>
+            <option value="graduate">graduate</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label>specialization</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="specs" value="computer-science"> computer science</label>
+            <label><input type="checkbox" name="specs" value="information-technology"> information technology</label>
+            <label><input type="checkbox" name="specs" value="computer-architecture"> computer architecture</label>
+            <label><input type="checkbox" name="specs" value="tele-communication"> tele communication</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="password">password <span class="req">*</span></label>
+          <input id="password" name="password" type="password" placeholder="choose a password" required>
+        </div>
+
+        <div class="form-row actions">
+          <button type="submit" id="submit-btn" class="btn">registered</button>
+          <button type="reset" class="btn secondary">reset</button>
+        </div>
+
+        <div id="form-messages" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="html5.js"></script>
+</body>
+</html>
