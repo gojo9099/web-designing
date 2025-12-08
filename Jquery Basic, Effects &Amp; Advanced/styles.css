@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, #f2f6fb, #eef3f8);
+    padding: 30px;
+     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    width: 950px;
+    align-items: center;
+    margin: 10px auto;
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background: #fff;
+}
+
+.left {
+    width: 48%;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #ffffff, #fafafa);
+    padding: 18px;
+}
+
+.left img {
+    max-width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.right {
+    width: 52%;
+    padding: 28px;
+}
+
+.right h1 {
+    margin: 0 0 6px;
+    font-size: 22px;
+    color: #113b63;
+}
+
+.right .desc {
+    margin: 0 0 12px;
+    color: #425a75;
+    font-size: 14px;
+}
+
+.instructions {
+    background: #fbfdff;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px dashed #e5eef8;
+    margin-bottom: 14px;
+}
+
+.instructions h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: #0b4a78;
+}
+
+.instructions ul {
+    padding-left: 18px;
+    margin: 6px 0 0;
+    color: #224b66;
+}
+
+.instructions li {
+    margin: 6px 0;
+    font-size: 13px;
+}
+
+.controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+#startBtn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(180deg, #2b83d7, #1b62b0);
+    color: #fff;
+    font-weight: 600;
+}
+
+.output {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #e6eef8;
+    color: #12314a;
+    min-height: 48px;
+    font-size: 13px;
+}
+
+@media (max-width: 1000px) {
+    .card {
+        flex-direction: column;
+        width: 92%;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+}
