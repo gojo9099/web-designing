@@ -1,12 +1,9 @@
-// Import all SASS partials (modules)
 
 @import 'base';
 @import 'layout';
 @import 'components';
 @import 'header';
 @import 'footer';
-
-// --- Page-Specific Styles ---
 
 .hero {
     background-color: #f9f9f9;
