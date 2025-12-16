@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="html5.css">
+</head>
+
+<body>
+    <main class="page-wrapper">
+        <section class="form-card">
+            <header class="form-header">
+                <div class="title-block">
+                    <h1>student registration form</h1>
+                    <p class="subtitle">fill the form carefully. required fields have *</p>
+                </div>
+            </header>
+
+            <form id="registration-form">
+
+                <div class="form-row">
+                    <label>first name <span class="req">*</span></label>
+                    <input type="text" name="firstName" placeholder="enter first name" required pattern="[A-Za-z]{3,7}"
+                        title="Only letters, 3 to 7 characters">
+                </div>
+
+                <div class="form-row">
+                    <label>last name</label>
+                    <input type="text" name="lastName" placeholder="enter last name">
+                </div>
+
+                <div class="row-two">
+                    <div class="form-row half">
+                        <label>email <span class="req">*</span></label>
+                        <input type="email" name="email" placeholder="example@gmail.com" required>
+                    </div>
+
+                    <div class="form-row half">
+                        <label>mobile <span class="req">*</span></label>
+                        <input type="tel" name="mobile" placeholder="10 digits only" pattern="[0-9]{10}" required
+                            title="Enter 10 digit mobile number">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>gender</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" required> male</label>
+                        <label><input type="radio" name="gender"> female</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>date of birth</label>
+                    <input type="date" name="dob">
+                </div>
+
+                <div class="form-row">
+                    <label>address</label>
+                    <textarea rows="4" placeholder="enter full address"></textarea>
+                </div>
+
+                <div class="form-row small-cols">
+                    <div>
+                        <label>city</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label>area pin</label>
+                        <input type="text" pattern="[0-9]{6}" title="6 digit pin code">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>state</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-row">
+                    <label>qualification</label>
+                    <select required>
+                        <option value="">select qualification</option>
+                        <option>Diploma</option>
+                        <option>Undergraduate</option>
+                        <option>Graduate</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label>specialization</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox"> computer science</label>
+                        <label><input type="checkbox"> information technology</label>
+                        <label><input type="checkbox"> computer architecture</label>
+                        <label><input type="checkbox"> tele communication</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>password <span class="req">*</span></label>
+                    <input type="password" placeholder="minimum 6 characters" minlength="6" required>
+                </div>
+
+                <div class="actions">
+                    <button class="btn">registered</button>
+                    <button type="reset" class="btn secondary">reset</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

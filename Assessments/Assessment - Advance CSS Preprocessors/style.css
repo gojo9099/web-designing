@@ -1,11 +1,11 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Base Styles */
+
 body {
   font-family: "Lato", sans-serif;
   line-height: 1.6;
@@ -51,14 +51,13 @@ ul {
   margin: 0 auto;
 }
 
-/* Helper class for flex row */
 .flex-row {
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
 
-/* Placeholder styles from _components.scss */
+
 .features .feature-card .btn-learn-more,
 .btn-learn-more {
   display: inline-block;
@@ -197,7 +196,6 @@ ul {
   color: #f39c12;
 }
 
-/* --- Page-Specific Styles --- */
 .hero {
   background-color: #f9f9f9;
   padding: 60px 0;
@@ -216,8 +214,13 @@ ul {
 .hero .hero-image {
   flex: 1;
   background-color: #333;
-  height: 300px;
+  height: 320px;
   border-radius: 8px;
+}
+.hero-image img{
+  height: 320px;
+  border-radius: 10px;
+  
 }
 
 .features {
@@ -240,10 +243,17 @@ ul {
   flex: 1;
 }
 
-.features .feature-image-placeholder {
+.feature-image-placeholder {
   height: 200px;
+  align-items: center;
+  text-align: center;
   background-color: #555;
   margin-bottom: 15px;
+}
+.feature-image-placeholder img{
+  height: 200px;
+  object-fit: cover;
+  width: 346px;
 }
 
 
@@ -257,11 +267,10 @@ ul {
     width: 100%;
   }
 
-  /* Mobile menu hidden by default */
   .mobile-nav {
     display: none;
     position: absolute;
-    top: 40px;        /* Bloom logo ke niche */
+    top: 40px;        
     left:0;
     width: 100%;
     background: #343434;
@@ -297,10 +306,9 @@ ul {
   gap:600px;
 }
 
-  /* --- Hero --- */
+
   .hero .container {
     flex-direction: column;
-    /* Stack text and image */
     text-align: center;
   }
 
@@ -310,17 +318,14 @@ ul {
     margin-top: 30px;
   }
 
-  /* --- Features --- */
   .features .features-grid {
     flex-direction: column;
-    /* Stack feature cards */
     gap: 40px;
   }
 
   /* --- Footer --- */
   .main-footer .footer-grid {
     flex-direction: column;
-    /* Stack footer widgets */
   }
 
   .main-footer .footer-widget {
@@ -328,7 +333,6 @@ ul {
   }
 }
 
-/* Mobile Breakpoint */
 @media (max-width: 480px) {
   .mainheader .container {
     flex-direction: column;
@@ -357,11 +361,11 @@ ul {
   .hero {
     padding: 40px 0;
   }
-  /* MOBILE NAVIGATION FIX */
+ 
 .mobile-nav {
   display: none;
   position: absolute;
-  top: 70px;      /* Bloom logo ke niche */
+  top: 70px;    
   left: 0;
   width: 100%;
   background: #343434;
@@ -372,7 +376,7 @@ ul {
 .mobile-nav ul {
   display: flex;
   flex-direction: column;
-  gap: 20px;      /* GAP BETWEEN LIST ITEMS */
+  gap: 20px;      
   align-items: center;
 }
 
