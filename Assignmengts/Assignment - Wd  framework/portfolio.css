@@ -1,0 +1,90 @@
+body {
+    background: #f9fafb;
+    font-family: Poppins, Arial;
+}
+
+.navbar {
+    background: #ffffff;
+    padding: 18px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.nav-link {
+    color: #111827;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.hero {
+    background: #fef3c7;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 52px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.hero p {
+    color: #4b5563;
+    font-size: 17px;
+    max-width: 520px;
+}
+
+.btn-primary {
+    background: #facc15;
+    border: none;
+    color: #111827;
+    border-radius: 30px;
+    padding: 10px 28px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #eab308;
+}
+
+.btn-outline-dark {
+    border-radius: 30px;
+    padding: 10px 28px;
+}
+
+.section-gap {
+    margin-top: 120px;
+}
+
+#projectCarousel .carousel-control-prev-icon,
+#projectCarousel .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.card {
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.modal-header {
+    background: #111827;
+    color: white;
+}
+
+.form-control {
+    border-radius: 14px;
+    padding: 12px;
+}
+
+.footer {
+    background: #111827;
+    color: #d1d5db;
+}
