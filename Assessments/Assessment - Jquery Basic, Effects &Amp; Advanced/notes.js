@@ -1,32 +1,46 @@
-let allNotes = [];
+const NOTES_KEY = "my_notes_app";
+
+function getNotes() {
+    return JSON.parse(localStorage.getItem(NOTES_KEY)) || [];
+}
+
+function saveNotes(notes) {
+    localStorage.setItem(NOTES_KEY, JSON.stringify(notes));
+}
 
 export function addNote() {
-    let n = prompt("Enter note (press OK when done):");
-    while (!n || n.trim().length === 0) {
-        n = prompt("Enter valid note:");
-    }
-    allNotes.push(n.trim());
-    return formatNotesAfterEntry(n.trim());
+    let notes = getNotes();
+
+    let note = prompt("Enter note:");
+    if (note === null) return "Operation cancelled";
+
+    note = note.trim();
+    if (note.length === 0) return "Invalid note";
+
+    notes.push(note);
+    saveNotes(notes);
+
+    let output = "Note added successfully\n\nAll Notes:\n";
+    notes.forEach((n, i) => {
+        output += (i + 1) + ". " + n + "\n";
+    });
+
+    return output;
 }
 
 export function viewNotes() {
-    if (allNotes.length === 0) return "No notes found";
-    let out = "";
-    for (let i = 0; i < allNotes.length; i++) {
-        out += (i + 1) + ". " + allNotes[i] + "\n";
-    }
-    return out;
+    let notes = getNotes();
+    if (notes.length === 0) return "No notes found";
+
+    let output = "Saved Notes:\n";
+    notes.forEach((n, i) => {
+        output += (i + 1) + ". " + n + "\n";
+    });
+
+    return output;
 }
 
 export function clearNotes() {
-    allNotes = [];
+    localStorage.removeItem(NOTES_KEY);
     return "All notes cleared";
-}
-
-function formatNotesAfterEntry(latest) {
-    let s = "Latest note: " + latest + "\n\nAll notes:\n";
-    for (let i = 0; i < allNotes.length; i++) {
-        s += (i + 1) + ". " + allNotes[i] + "\n";
-    }
-    return s;
 }

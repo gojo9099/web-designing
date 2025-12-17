@@ -1,20 +1,20 @@
-// Reset
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-// Variables (Reusable Logic)
+
 $font-primary: 'Lato', sans-serif;
-$color-primary: #f39c12; // Orange color for buttons
+$color-primary: #f39c12;
 $color-text-dark: #333;
 $color-text-light: #777;
 $color-bg-dark: #343434;
 $color-bg-light: #fff;
 $container-width: 1100px;
 
-// Base Styles
+
 body {
     font-family: $font-primary;
     line-height: 1.6;

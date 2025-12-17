@@ -3,32 +3,39 @@ import { addNote, viewNotes, clearNotes } from "./notes.js";
 import { show } from "./utils.js";
 
 $("#startBtn").on("click", function () {
-    runProgram();
+    openMenu();
 });
 
-function runProgram() {
-    let running = true;
-    while (running) {
-        let op = showMenu();
-        while (!op || isNaN(op) || op < 1 || op > 4) {
-            op = showMenu();
-        }
-        if (op == 1) {
-            let m = addNote();
-            show(m);
-            alert("Note added");
-        } else if (op == 2) {
-            let m = viewNotes();
-            show(m);
-            alert("Showing notes");
-        } else if (op == 3) {
-            let m = clearNotes();
-            show(m);
-            alert("All cleared");
-        } else if (op == 4) {
-            running = false;
-            show("Program exited");
-            alert("Exit");
-        }
+function openMenu() {
+    let choice = showMenu();
+    if (choice === null) {
+        show("Program cancelled");
+        return;
+    }
+
+    choice = Number(choice);
+
+    if (isNaN(choice) || choice < 1 || choice > 3) {
+        alert("Invalid choice");
+        openMenu();
+        return;
+    }
+
+    if (choice === 1) {
+        show(addNote());
+        setTimeout(() => {
+            alert("Press OK to continue");
+            openMenu();
+        }, 0);
+    }
+    else if (choice === 2) {
+        show(clearNotes());
+        setTimeout(() => {
+            alert("Press OK to continue");
+            openMenu();
+        }, 0);
+    }
+    else if (choice === 3) {
+        show("Program exited");
     }
 }

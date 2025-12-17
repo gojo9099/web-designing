@@ -5,13 +5,13 @@
 body {
     background: linear-gradient(180deg, #f2f6fb, #eef3f8);
     padding: 30px;
-     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .card {
     width: 950px;
     align-items: center;
-    margin: 10px auto;
+    margin: 120px auto;
     display: flex;
     border-radius: 12px;
     overflow: hidden;

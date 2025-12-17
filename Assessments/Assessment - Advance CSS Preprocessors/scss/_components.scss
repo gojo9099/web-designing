@@ -1,4 +1,4 @@
-// Placeholder selector for the "Learn More" button
+
 %btn-base {
     display: inline-block;
     background-color: $color-primary;
@@ -16,7 +16,7 @@
     }
 }
 
-// Placeholder selector for basic card layout
+
 %card-base {
     background-color: #fff;
     
@@ -30,12 +30,12 @@
     }
     
     .btn-learn-more {
-        // We use @extend here!
+        
         @extend %btn-base;
     }
 }
 
-// We can also just apply the extend to a class directly
+
 .btn-learn-more {
     @extend %btn-base;
 }
