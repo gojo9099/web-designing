@@ -4,8 +4,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    /* Horizontal scroll forcefully band karega */
-
 }
 
 .navbar {
@@ -250,7 +248,6 @@ body {
 
 .mobile-toggles {
     display: none;
-    /* Desktop par hide */
     align-items: center;
 }
 
@@ -263,7 +260,6 @@ body {
 
 @media (max-width: 900px) {
 
-    /* Tablet / Small Laptop Adjustments */
     .topbar {
         height: 70px;
         padding: 5px 15px;
@@ -291,7 +287,6 @@ body {
         width: 20px;
     }
 
-    /* Toggle Button Show */
     .mobile-toggles {
         display: block;
     }
@@ -300,7 +295,6 @@ body {
         display: block;
     }
 
-    /* Toggle Icon Styling */
     .menuBtn,
     .closeMenu {
         font-size: 28px;
@@ -310,7 +304,6 @@ body {
 
     .closeMenu {
         display: none;
-        /* Initially hidden */
     }
 
 
@@ -359,17 +352,12 @@ body {
         padding-left: 5px !important;
     }
 
-    /* Mega menu static in mobile */
     .mega-menu {
         position: absolute;
         position: absolute;
-        /* relative to nearest positioned ancestor (e.g. .navbar) */
         left: 50%;
-        /* start at 50% of ancestor */
         transform: translateX(-50%);
-        /* shift left by half width => centered */
         top: 38px;
-        /* same as your hover top */
         width: 800px;
         display: flex;
         justify-content: space-between;
@@ -383,8 +371,6 @@ body {
         box-shadow: none;
     }
 
-    /* Mobile pe shadow ki zarurat nahi hoti */
-
     .dropdown:hover .mega-menu {
         display: flex;
     }
@@ -392,14 +378,11 @@ body {
 
 
     @media (max-width: 600px) {
-        /* Mobile Adjustments - SAB DIKHEGA par size chhota hoga */
-
         .topbar {
             padding: 5px 10px;
             height: 60px;
         }
 
-        /* 1. Logo - Text chhota karo, Image chhoti karo */
         .logo img {
             height: 40px;
         }
@@ -407,14 +390,11 @@ body {
         .logo span a {
             font-size: 18px;
             display: block;
-            /* Agar jagah kam ho to text hide kar sakte ho: display: none; */
         }
 
-        /* 2. Right Side Icons - Gap kam karo */
         .svglogo {
             gap: 8px;
             padding-right: 0;
-            /* Extra padding hatao */
         }
 
         .svglogo svg {
@@ -422,15 +402,12 @@ body {
             width: 18px;
         }
 
-        /* 3. Button - Text chhota, Padding kam */
         .btn {
             padding: 6px 12px;
             font-size: 10px;
-            /* Text readable rahega par chhota */
             border-radius: 15px;
         }
 
-        /* 4. Toggle Icons */
         .mobile-toggles {
             margin-right: 8px;
         }
@@ -440,7 +417,6 @@ body {
             font-size: 24px;
         }
 
-        /* Listbar adjust for mobile */
         .listbar {
             top: 60px;
         }

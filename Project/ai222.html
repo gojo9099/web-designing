@@ -51,7 +51,7 @@
             </g>
           </svg></a>
 
-        <a href="#"><button class="btn">BOOK APPOINMENT</button></a>
+        <a href="Appointment.html"><button class="btn">BOOK APPOINMENT</button></a>
       </div>
 
     </div>
@@ -265,32 +265,9 @@
     </div>
   </footer>
 
-  <script>
-
-    const listbar = document.querySelector(".listbar");
-    const menuBtn = document.querySelector(".menuBtn");
-    const closeBtn = document.querySelector(".closeMenu");
-
-    function openMenu() {
-      listbar.classList.add("open");
-      menuBtn.style.display = "none";
-      closeBtn.style.display = "block";
-    }
-
-    function closeMenu() {
-      listbar.classList.remove("open");
-      menuBtn.style.display = "block";
-      closeBtn.style.display = "none";
-    }
-
-
-    document.querySelectorAll('.faq-q').forEach(q => {
-      q.addEventListener('click', () => {
-        q.parentElement.classList.toggle('active');
-      });
-    });
-  </script>
-
+  
+   <script src="ai222.js"></script>
+  <script src="toggle .js"></script>
 </body>
 
 </html>

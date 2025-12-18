@@ -53,7 +53,7 @@
                     </svg>
                 </a>
 
-                <a href="#"><button class="btn" aria-label="Book appointment">BOOK APPOINTMENT</button></a>
+                <a href="Appointment.html"><button class="btn" aria-label="Book appointment">BOOK APPOINTMENT</button></a>
             </div>
 
         </div>
@@ -491,39 +491,8 @@
     </footer>
 
 
-
-    <script>
-
-
-        const listbar = document.querySelector(".listbar");
-        const menuBtn = document.querySelector(".menuBtn");
-        const closeBtn = document.querySelector(".closeMenu");
-
-        function openMenu() {
-            listbar.classList.add("open");       
-            menuBtn.style.display = "none";    
-            closeBtn.style.display = "block";    
-        }
-
-        function closeMenu() {
-            listbar.classList.remove("open");    
-            menuBtn.style.display = "block";    
-            closeBtn.style.display = "none";    
-        }
-
-        
-        window.onscroll = function () { myFunction() };
-        var navbar = document.getElementById("catNav");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
-    </script>
+    <script src="toggle .js"></script>
+    <script src="toggle.js"></script>
 </body>
 
 </html>

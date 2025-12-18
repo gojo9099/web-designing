@@ -11,7 +11,7 @@
 
 <body>
 
-        <nav class="navbar" style="background: rgba(255, 255, 255, 0.3);">
+    <nav class="navbar" style="background: rgba(255, 255, 255, 0.3);">
 
         <div class="topbar">
 
@@ -21,10 +21,10 @@
             </div>
 
             <div class="svglogo">
-                  <div class="mobile-toggles">
-                <span class="menuBtn" onclick="openMenu()">&#9776;</span>
-                <span class="closeMenu" onclick="closeMenu()">&#9746;</span>
-            </div>
+                <div class="mobile-toggles">
+                    <span class="menuBtn" onclick="openMenu()">&#9776;</span>
+                    <span class="closeMenu" onclick="closeMenu()">&#9746;</span>
+                </div>
 
                 <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -50,7 +50,7 @@
                         </g>
                     </svg></a>
 
-                <a href="#"><button class="btn">BOOK APPOINMENT</button></a>
+                <a href="Appointment.html"><button class="btn">BOOK APPOINMENT</button></a>
             </div>
 
         </div>
@@ -157,9 +157,10 @@
             <section class="listing">
                 <div class="list-info">Showing 1-5 of 54 Courses</div>
 
-              
+
                 <article class="card" data-category="cosmetology">
-                    <div class="thumb"><img src="https://www.lakme-academy.com/images/cosmetic-procedure-eyebrows.jpg" alt="course image"></div>
+                    <div class="thumb"><img src="https://www.lakme-academy.com/images/cosmetic-procedure-eyebrows.jpg"
+                            alt="course image"></div>
                     <div class="content">
                         <span class="tag">Cosmetology</span>
                         <h3>Certificate Course in Fundamentals of Cosmetology</h3>
@@ -170,9 +171,11 @@
                     </div>
                 </article>
 
-               
+
                 <article class="card" data-category="cosmetology">
-                    <div class="thumb"><img src="https://www.lakme-academy.com/images/thumbnails-certificate-course-in-foundation-cosmetology.png" alt="course image"></div>
+                    <div class="thumb"><img
+                            src="https://www.lakme-academy.com/images/thumbnails-certificate-course-in-foundation-cosmetology.png"
+                            alt="course image"></div>
                     <div class="content">
                         <span class="tag">Cosmetology</span>
                         <h3>Certificate Course in Foundation Cosmetology</h3>
@@ -183,9 +186,11 @@
                     </div>
                 </article>
 
-               
+
                 <article class="card" data-category="cosmetology">
-                    <div class="thumb"><img src="https://www.lakme-academy.com/images/thumbnails-certificate-course-in-advance-cosmetology.png" alt="course image"></div>
+                    <div class="thumb"><img
+                            src="https://www.lakme-academy.com/images/thumbnails-certificate-course-in-advance-cosmetology.png"
+                            alt="course image"></div>
                     <div class="content">
                         <span class="tag">Cosmetology</span>
                         <h3>Certificate Course in Advance Cosmetology</h3>
@@ -196,9 +201,11 @@
                     </div>
                 </article>
 
-               
+
                 <article class="card" data-category="makeup">
-                    <div class="thumb"><img src="https://www.lakme-academy.com/images/thumbnails-foundation-course-in-make-up-artistry.png" alt="course image"></div>
+                    <div class="thumb"><img
+                            src="https://www.lakme-academy.com/images/thumbnails-foundation-course-in-make-up-artistry.png"
+                            alt="course image"></div>
                     <div class="content">
                         <span class="tag">Make Up</span>
                         <h3>Foundation Course in Make Up Artistry</h3>
@@ -209,9 +216,10 @@
                     </div>
                 </article>
 
-                
+
                 <article class="card" data-category="makeup">
-                    <div class="thumb"><img src="https://www.lakme-academy.com/images/high-fashion-makeup-model.png" alt="course image"></div>
+                    <div class="thumb"><img src="https://www.lakme-academy.com/images/high-fashion-makeup-model.png"
+                            alt="course image"></div>
                     <div class="content">
                         <span class="tag">Make Up</span>
                         <h3>Certificate Course in Advanced Make Up Artistry</h3>
@@ -238,7 +246,7 @@
         <div class="spacer"></div>
     </div>
 
-        <footer class="footer">
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-col">
                 <h3>Know Us</h3>
@@ -274,43 +282,8 @@
         </div>
     </footer>
 
-    <script>
-
-   // Elements select kar rahe hain
-        const listbar = document.querySelector(".listbar");
-        const menuBtn = document.querySelector(".menuBtn");
-        const closeBtn = document.querySelector(".closeMenu");
-
-        function openMenu() {
-            listbar.classList.add("open");       // Menu open class add karo
-            menuBtn.style.display = "none";      // Hamburger chupao
-            closeBtn.style.display = "block";    // Cross dikhao
-        }
-
-        function closeMenu() {
-            listbar.classList.remove("open");    // Menu open class hatao
-            menuBtn.style.display = "block";     // Hamburger wapas lao
-            closeBtn.style.display = "none";     // Cross chupao
-        }
-
-
-        // basic filter functionality (non-destructive)
-        const checkboxes = document.querySelectorAll('.filters input[type="checkbox"]');
-        const cards = document.querySelectorAll('.card');
-        function applyFilters() {
-            const active = Array.from(checkboxes).filter(c => c.checked).map(c => c.name);
-            cards.forEach(card => {
-                const cat = card.getAttribute('data-category');
-                if (active.includes(cat)) card.style.display = 'flex'; else card.style.display = 'none';
-            })
-        }
-        checkboxes.forEach(cb => cb.addEventListener('change', applyFilters));
-        document.getElementById('clearFilters').addEventListener('click', () => {
-            checkboxes.forEach(c => c.checked = false); applyFilters();
-        });
-        // init
-        applyFilters();
-    </script>
+    <script src="course.js"></script>
+    <script src="toggle .js"></script>
 </body>
 
 </html>
