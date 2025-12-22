@@ -14,8 +14,15 @@
             background: #f3f4f6
         }
 
+        .navbar {
+            background: #e6e9ef;
+            backdrop-filter: blur(10px);
+            padding: 18px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+        }
+
         .sidebar {
-            padding-top: 50px;
+            padding-top: 20px;
             cursor: pointer;
             background: #111827;
             color: white;
@@ -37,6 +44,10 @@
             background: #1f2937
         }
 
+        .container-fluid {
+            padding-top: 120px;
+        }
+
         .card {
             border: none;
             border-radius: 16px;
@@ -51,32 +62,26 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg" style="margin-bottom: 10px;">
-    <div class="container">
-        <a class="navbar-brand" href="portfolio.html">Portfolio</a>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#home">
+                MY<span style="color:#6366f1">PORTFOLIO</span>
+            </a>
 
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="portfolio.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="project1.html">Landing Page</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projects2.html">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <button class="btn btn-primary ms-3"
-                        data-bs-toggle="modal"
-                        data-bs-target="#contactModal">
-                        Contact
-                    </button>
-                </li>
-            </ul>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="port.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="port.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="port.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="projects2.html">Dashboard</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
 
     <div class="container-fluid">
@@ -119,8 +124,9 @@
                 <div class="card p-4 mb-4">
                     <h5>Recent Activity</h5>
                     <p>
-                        This section displays recent system activities such as user registrations,
-                        order placements and account updates for quick monitoring.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit reprehenderit molestiae nemo
+                        nostrum tempora eum accusantium quae deserunt est cum possimus sequi aliquid voluptatibus
+                        tempore minus, fugiat earum porro? Error!
                     </p>
                 </div>
 
@@ -159,7 +165,7 @@
         </div>
     </div>
 
-     <div class="container-fluid footer py-4 text-center mt-5">
+    <div class="container-fluid footer py-4 text-center mt-5">
         <p class="mb-0">© 2025 Vikash Shakya Portfolio</p>
     </div>
 
@@ -185,7 +191,7 @@
         </div>
     </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
