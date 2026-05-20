@@ -1,13 +1,9 @@
-/* ========== UPDATED home.css (responsive tweaks added) ========== */
-
-/* ----- BASE (your original rules kept and adjusted where needed) ----- */
-
 :root {
     --primary: #BF092F;
     --muted: rgba(100, 100, 100, .9);
 }
 
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +16,6 @@ body {
     color: #111;
 }
 
-/* Slider & top spacing */
 .slider-container {
     position: relative;
     width: 100%;
@@ -338,7 +333,6 @@ body {
     cursor: pointer;
 }
 
-/* Footer & caution box (keep original style) */
 .footer {
     margin-top: 150px;
     background: #000;
@@ -386,165 +380,12 @@ body {
     color: #fff;
 }
 
-.caution-box {
-    margin-top: 40px;
-    max-width: 1100px;
-    padding: 0 8%;
-    color: #ddd;
-}
-
-.caution-box h3 {
-    font-size: 26px;
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
-.caution-box p {
-    line-height: 1.7;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-/* ------ NAVBAR (these selectors are in your nav and foot.css but ensure they exist) ------ */
-/* If your nav/foot.css already contains these, these rules will harmonize */
-.navbar {
-    position: fixed;
-    width: 100%;
-    z-index: 10000;
-    top: 0;
-    left: 0;
-}
-
-.topbar {
-    background: rgba(255, 255, 255, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 8%;
-    gap: 12px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo img {
-    height: 120px;
-}
-
-.logo span a {
-    color: black;
-    font-size: 45px;
-    font-family: "Pacifico", cursive;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-/* icons + buttons inside topbar */
-.svglogo {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    padding-right: 20px;
-}
-
-.menuBtn {
-    display: none;
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding-left: 35px;
-}
-
-.closeMenu {
-    display: none;
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* listbar (desktop visible) */
-.listbar {
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 8%;
-}
-
-.list {
-    gap: 100px;
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-.list a {
-    font-weight: 600;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 25px;
-    transition: 0.35s;
-    white-space: nowrap;
-}
-
-.list li a:hover {
-    transform: translateY(-6px);
-    background: skyblue;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
-    color: #000;
-}
-
-.list li a.active {
-    background: skyblue;
-    color: #000;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
-}
-
-/* mega-menu desktop */
-.mega-menu {
-    position: absolute;
-    left: 0;
-    top: 60px;
-    width: 800px;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 30px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all .3s ease-in-out;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
-}
-
-.dropdown:hover .mega-menu {
-    opacity: 1;
-    pointer-events: auto;
-    top: 38px;
-}
-
-
 
 @media (max-width: 768px) {
-    
-    /* Slider Adjustment */
     .slider-container {
         top: 0;
-        margin-top: 70px; /* Navbar ke liye jagah */
-        height: 55vh; /* Screen ka 50% height */
+        margin-top: 70px;
+        height: 55vh; 
     }
 
     .heading1 {
@@ -556,7 +397,6 @@ body {
         font-size: 40px;
     }
 
-    /* Service 1: Keep in Row but shrink */
     .service1 {
         margin-top: 60px;
         gap: 10px;
@@ -564,17 +404,17 @@ body {
     }
 
     .wrap {
-        width: 32%; /* 3 items ek line mein */
+        width: 32%;
     }
 
     .wrap img {
         width: 100%;
-        height: 200px; /* Height kam ki */
+        height: 200px;
         border-radius: 10px;
     }
 
     .wrap span {
-        font-size: 18px; /* Text chhota kiya */
+        font-size: 18px; 
         margin-top: 10px;
     }
 
@@ -582,18 +422,16 @@ body {
         font-size: 14px;
         line-height: 1.2;
     }
-
-    /* Service 2: Icons Row */
     .service2 {
         padding-top: 60px;
         gap: 15px;
-        overflow-x: auto; /* Agar screen se bahar jaye to scroll ho */
+        overflow-x: auto; 
         padding-bottom: 20px;
     }
 
     .webp {
         width: 100px;
-        min-width: 80px; /* Minimum width taaki squeeze na ho */
+        min-width: 80px; 
     }
 
     .webp img {
@@ -608,18 +446,15 @@ body {
         height: 180px;
     }
 
-    /* News Images Row */
     .newsraw1 {
         gap: 10px;
         padding: 20px 10px;
     }
 
     .newsraw1 img {
-        height: 250px; /* Height kam ki */
-        width: 48%; /* 2 items ek line mein */
+        height: 250px; 
+        width: 48%; 
     }
-
-    /* Share App Section Row */
     .share {
         padding-top: 50px;
         gap: 10px;
@@ -628,7 +463,7 @@ body {
     }
 
     .human3 img {
-        height: 300px; /* Image adjust */
+        height: 300px; 
         width: auto;
         padding-left: 10px;
     }
@@ -657,17 +492,16 @@ body {
         padding: 16px;
     }
 
-    /* Footer Row */
     .footer-container {
         display: flex;
-        flex-direction: row; /* Row maintain kiya */
+        flex-direction: row; 
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 20px;
     }
     
     .footer-col {
-        min-width: 45%; /* 2 column ek line mein */
+        min-width: 45%; 
         margin-bottom: 20px;
     }
 }
@@ -675,28 +509,26 @@ body {
 /* --- MOBILE (Max-Width: 480px) --- */
 @media (max-width: 480px) {
 
-    /* Slider: Mobile View */
     .slider-container {
         margin-top: 60px;
-        height: 35vh; /* Mobile par chhota slider */
+        height: 35vh; 
     }
 
     .heading1 h1 {
         font-size: 28px;
     }
 
-    /* Service 1: Row Maintain (Very tight fit) */
     .service1 {
         margin-top: 40px;
         gap: 5px;
     }
 
     .wrap {
-        width: 33%; /* Teeno ek line mein */
+        width: 33%; 
     }
 
     .wrap img {
-        height: 120px; /* Choti images */
+        height: 120px; 
         width: 100%;
         border-radius: 5px;
     }
@@ -707,13 +539,10 @@ body {
     }
 
     .wrap p {
-        display: none; /* Text mobile par hide kar diya taaki clutter na ho, ya chhota font rakhein */
+        display: none;
         font-size: 10px; 
     }
     
-    /* Agar text dikhana jaruri hai to upar wala display:none hata kar font-size: 9px karein */
-
-    /* Service 2: Icons */
     .service2 {
         gap: 5px;
         padding-top: 40px;
@@ -728,7 +557,6 @@ body {
         font-size: 12px;
     }
 
-    /* Call Back Images */
     .callback {
         padding-top: 40px;
         gap: 10px;
@@ -738,7 +566,6 @@ body {
         width: 48%;
     }
 
-    /* Heading 2 Section */
     .heading2 h1 {
         font-size: 24px;
     }
@@ -750,20 +577,16 @@ body {
         font-size: 14px;
     }
 
-    /* News Section */
     .newsraw1 img {
-        height: 180px; /* Row mein fit karne ke liye height kam */
+        height: 180px; 
     }
-
-    /* Share App - Image hata di ya choti ki taaki row rahe */
     .share {
         padding-top: 40px;
         align-items: center;
     }
     
     .human3 img {
-        display: none; /* Mobile par photo hata di taaki form row mein fit ho, ya height: 150px karein */
-    }
+        display: none; 
 
     .number {
         width: 100%;
@@ -771,7 +594,7 @@ body {
     }
     
     .digit {
-        flex-direction: column; /* Input aur button ko niche laye taaki fit ho */
+        flex-direction: column; 
         align-items: center;
     }
 
@@ -780,8 +603,6 @@ body {
         height: 40px;
         font-size: 16px;
     }
-
-    /* Footer: 2 columns in a row */
     .footer {
         padding: 30px 10px;
     }
@@ -791,4 +612,4 @@ body {
     .footer-col ul li a {
         font-size: 13px;
     }
-}
+}}

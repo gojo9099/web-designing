@@ -2,9 +2,7 @@
       --bg: #fbfcfe;
       --muted: #6b7280;
       --accent: #ffb020;
-      /* warm accent */
       --primary: #0b5f9b;
-      /* deep blue */
       --card: #ffffff;
       --radius: 14px;
       --maxw: 1200px;
@@ -12,11 +10,10 @@
 
     body {
       font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif;
-      background: var(--bg);
       color: #0f172a;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      line-height: 1.65;
+     
     }
 
     img {
@@ -294,8 +291,8 @@
     .why {
       margin: 34px 0;
       display: grid;
-      grid-template-columns: 1fr 360px;
-      gap: 24px;
+      grid-template-columns: 1fr 420px;
+    
       align-items: center;
     }
 
@@ -341,6 +338,4 @@
       flex-wrap: wrap;
     }
 
-    .cta-banner h3 {
-      margin-bottom: 6px
-    }
+ 

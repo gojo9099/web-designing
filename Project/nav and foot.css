@@ -41,6 +41,7 @@ body {
 }
 
 .svglogo svg {
+    cursor: pointer;
     height: 30px;
     width: 30px;
     align-items: center;
@@ -53,7 +54,7 @@ body {
     gap: 40px;
 }
 
-.btn {
+.btnnav {
     color: white;
     border: none;
     background-color: #3F4F44;
@@ -67,11 +68,6 @@ body {
     background-size: 200% 100%;
     background-position: right bottom;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-}
-
-.btn:hover {
-    background-position: left bottom;
-    color: #000;
 }
 
 
@@ -100,20 +96,6 @@ body {
     padding: 10px 20px;
     border-radius: 25px;
     transition: 0.35s ease-in-out;
-}
-
-.list li a:hover {
-    transform: translateY(-6px);
-    background-color: skyblue;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
-    color: #000;
-}
-
-.list li a.active {
-    background-color: skyblue;
-    color: #000;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
 }
 
 .dropdown {
